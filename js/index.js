@@ -13,6 +13,40 @@ var upperletters
 var arrayinclude = []
 var generatedPassword = ""
 
+function criteria () {
+    length = prompt("length of password?")
+    
+    if (length < 8) {
+        alert("Password must be longer than 8 characters");
+        criteria();
+    } else if (length > 50) {
+        alert("Password must be les than 50 characters");
+        criteria();
+    }
+    generatedPassword = ""
+    return length
+}
+//letters
+function criteriaLower() {
+    lowerletters = confirm("include lower letter?");
+    return lowerletters;
+}
+//capital letters
+function criteriaUpper() {
+    upperletters = confirm("include capital letters?");
+    return upperletters;
+}
+//numbers
+function criterianumbers() {
+    numbers1 = confirm("include numbers?");
+    return numbers1;
+}
+//symbols
+function criteriaSymbols() {
+    symbols = confirm("include symbols?");
+    return symbols;
+}
+
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
